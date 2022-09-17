@@ -92,7 +92,7 @@ export default function SignUpForm(){
                     name='confirmPassword'
                     value={confirmPassword} />
 
-                <button type="submit">Sign Up</button>
+                <button style={{color: 'blue'}} type="submit">Sign Up</button>
             </form>
         </div>
     );
