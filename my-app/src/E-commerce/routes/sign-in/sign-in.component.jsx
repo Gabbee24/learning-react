@@ -28,7 +28,7 @@ export default function SignIn() {
     return(
         <div>
             <h1>Sign In Page</h1>
-            <button style={{color:'blue'}} onClick={logGoogleUser}>
+            <button onClick={logGoogleUser}>
                 Sign in with google popup
             </button>
             <SignUpForm/>
