@@ -1,8 +1,13 @@
+import './button.styles.css'
 
+const BUTTON_TYPE_CLASSES = {
+    google:'google-sign-in',
+    inverted : 'inverted',
+}
 
-export default function Button ({children}){
+export default function Button ({children, buttonType, ...otherProps}){
     return(
-        <button className="button-container">
+        <button className={`button-container ${BUTTON_TYPE_CLASSES[buttonType]}`}>
             {children}
         </button>
     )
