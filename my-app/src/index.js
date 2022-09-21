@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom'
 import App from './E-commerce/App';
+import { UserProvider } from './E-commerce/contexts/user.context';
 import reportWebVitals from './reportWebVitals';
 import './index.css'
 //import AppCard from './MyJs2/AppCard'
@@ -28,7 +29,9 @@ const root = ReactDOM.createRoot(document.getElementById('root2'));
 root.render(
   <>
     <BrowserRouter>
-      <App/>
+      <UserProvider>
+        <App/>
+      </UserProvider>
     </BrowserRouter>
   </>
 );

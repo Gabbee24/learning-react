@@ -1,12 +1,16 @@
-import { async } from "@firebase/util";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import FormInput from "../form-input/form-input.component";
+import Button from "../button/button.component";
+
 import { 
     createAuthUserWithEmailAndPassword,
     createUserDocumentFromAuth 
 } from "../../utils/firebase/firebase.utils";
-import FormInput from "../form-input/form-input.component";
+
+import { UserContext } from "../../contexts/user.context";
+
 import './sign-up-form.styles.css'
-import Button from "../button/button.component";
 
 const defaultFormFields = {
     displayName : '',
@@ -20,7 +24,7 @@ export default function SignUpForm(){
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {displayName, email, password, confirmPassword} = formFields;
 
-    console.log(formFields);
+    const {setCurrentUser} = useContext(UserContext);
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
@@ -30,7 +34,7 @@ export default function SignUpForm(){
         event.preventDefault();
 
         if(password !== confirmPassword){
-            alert('wrong password');
+            alert('password d not match');
             return;
         }
 
@@ -39,6 +43,8 @@ export default function SignUpForm(){
                 email,
                 password
             );
+
+            setCurrentUser(user);
 
             await createUserDocumentFromAuth(user, {displayName});
             resetFormFields();
@@ -95,7 +101,7 @@ export default function SignUpForm(){
                     name='confirmPassword'
                     value={confirmPassword} />
 
-                <Button type="submit">Sign Up</Button>
+                <Button type="Submit">Sign Up</Button>
             </form>
         </div>
     );
