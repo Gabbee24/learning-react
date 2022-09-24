@@ -11,7 +11,7 @@ import {
 import './sign-up-form.styles.css'
 
 const defaultFormFields = {
-    displayNamee : '',
+    displayName : '',
     email : '',
     password : '',
     confirmPassword : '',
