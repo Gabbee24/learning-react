@@ -31,9 +31,9 @@ root.render(
   <>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        
           <App/>
-        </ProductsProvider>
+        
       </UserProvider>
     </BrowserRouter>
   </>
