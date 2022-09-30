@@ -79,10 +79,12 @@ export default function SignInForm(){
                     value={password} />
 
                 <div className="buttons-container">
-                    <Button type="submit">Sign In</Button>
+                    {/* <Button type="submit">Sign In</Button>
                     <Button type='button' buttonType='google' onClick={signInWithGoogle}>
                         Google Sign In
-                    </Button>
+                    </Button> */}
+                    <input className="button-container" type="button" value='Log In'/>
+
                 </div>
             </form>
         </div>

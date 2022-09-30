@@ -5,7 +5,6 @@ import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/Authentication.component";
 import Shop from "./routes/shop/shop.component";
 
-
 function App(){
 
     return(

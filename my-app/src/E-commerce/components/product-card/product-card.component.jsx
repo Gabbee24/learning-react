@@ -3,6 +3,7 @@ import Button from '../button/button.component'
 
 export default function ProductCard({product}){
     const {name, price, imageUrl} = product;
+    
     return(
         <div className='product-card-container'>
             <img src={imageUrl} alt={`${name}`} />
@@ -12,5 +13,5 @@ export default function ProductCard({product}){
             </div>
             <Button buttonType='inverted'>Add to Cart</Button>
         </div>
-    )
-}
+    );
+};
