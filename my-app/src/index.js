@@ -12,13 +12,14 @@ root.render(
   <>
     <BrowserRouter>
       <UserProvider>
-          <App/>
         <ProductsProvider>
+          <App/>
 
         </ProductsProvider>
         
       </UserProvider>
     </BrowserRouter>
+
   </>
 );
 
