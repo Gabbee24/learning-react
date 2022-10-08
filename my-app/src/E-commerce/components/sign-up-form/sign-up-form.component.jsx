@@ -95,7 +95,7 @@ export default function SignUpForm(){
                     name='confirmPassword'
                     value={confirmPassword} />
 
-                <input className="button-container" type="button" value='Sign Up'/>
+                <input className="button-container" type="submit" value='Sign Up'/>
 
                 {/* <Button type="Submit">Sign Up</Button> */}
             </form>
